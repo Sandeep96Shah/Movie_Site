@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Movie</title>
+</head>
+<body>
+    <Section class="header_container">
+        <form id="form_field">
+            <input type="text" id="movie" onchange="show_related_search();" placeholder="Search Movie" />
+            <button id="search" onclick="search_movie();">Search</button>
+        </form>
+    </Section>
+    <section id="search_container">
+        <!-- <div class="search_result">
+            <div class="search_poster">
+                <img src="images/beautiful.jpg" alt="poster">
+            </div>
+            <div class="movie_information">
+                <p class="search_title">A Beautiful Mind</p>
+                <p class="search_rating">8/10</p>
+                <p class="search_add">Add</p>
+                <p class="cancel">Cancel</p>
+            </div>
+        </div> -->
+    </section>
+    <section class="main_container">
+        <div class="container">
+            <div class="button">
+                <div id="display_movies">
+                    <p id="movie_btn" onclick="showMoviesList();">Movies</p>
+                </div>
+                <div id="display_favourites">
+                    <p id="fav_btn" onclick="showFavouritesList();">Favourites</p>
+                </div>
+            </div>
+            <div id="movies_list">
+                <div class="item" id="1">
+                    <div class="movie_poster">
+                        <img src="images/beautiful.jpg" alt="movie_poster">
+                    </div>
+                    <div class="movie_info">
+                        <p class="movie_title">A beautiful Mind</p>
+                        <p class="movie_plot">
+                            John Nash, a brilliant but asocial 
+                            mathematical genius, finds his life changing for the worse 
+                            after he accepts an assignment from William Parcher.
+                            John Nash, a brilliant but asocial 
+                            mathematical genius, finds his life changing for the worse 
+                            after he accepts an assignment from William Parcher.
+                        </p>
+                        <p class="movie_wish" id="movie_wish1" onclick="addToFavouritesList(this);">Favourite</p>
+                    </div>
+                </div>
+
+                <div class="item" id="2">
+                    <div class="movie_poster">
+                        <img src="images/beautiful.jpg" alt="movie_poster">
+                    </div>
+                    <div class="movie_info">
+                        <p class="movie_title">A beautiful Mind</p>
+                        <p class="movie_plot">
+                            John Nash, a brilliant but asocial 
+                            mathematical genius, finds his life changing for the worse 
+                            after he accepts an assignment from William Parcher.
+                            John Nash, a brilliant but asocial 
+                            mathematical genius, finds his life changing for the worse 
+                            after he accepts an assignment from William Parcher.
+                        </p>
+                        <p class="movie_wish" id="movie_wish2" onclick="addToFavouritesList(this);">Favourite</p>
+                    </div>
+                </div>
+            </div>
+            <div id="favourites_movies">
+                <!-- <div class="item">
+                    <div class="movie_poster">
+                        <img src="images/beautiful.jpg" alt="movie_poster">
+                    </div>
+                    <div class="movie_info">
+                        <p class="movie_title">A beautiful Mind</p>
+                        <p class="movie_plot">
+                            John Nash, a brilliant but asocial 
+                            mathematical genius, finds his life changing for the worse 
+                            after he accepts an assignment from William Parcher.
+                            John Nash, a brilliant but asocial 
+                            mathematical genius, finds his life changing for the worse 
+                            after he accepts an assignment from William Parcher.
+                        </p>
+                        <p class="movie_fav">Unfavourite</p>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+    <script src="index.js"></script>
+</body>
+</html>
