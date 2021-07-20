@@ -174,3 +174,14 @@ function show_related_search(){
         console.log("nothing to remove");
     }
 }
+
+function changeTab(movie){
+    let detail = document.getElementById('detail');
+    console.log(detail);
+    let a=document.createElement('a');
+    a.href="google.com";
+    ;
+    console.log(a);
+    //detail.appendChild(a.appendChild(document.createTextNode(movie)));
+    console.log(movie);
+}
