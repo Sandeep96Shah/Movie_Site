@@ -101,7 +101,7 @@ async function search_movie(){
         e.preventDefault();
     })
     let movie = document.getElementById('movie').value;
-    let movieResponse = await fetch(`http://www.omdbapi.com/?apikey=3ca5df7&t=${movie}`);
+    let movieResponse = await fetch(`https://www.omdbapi.com/?apikey=3ca5df7&t=${movie}`);
     let data = await movieResponse.json();
     console.log(data);
     let searchContainer = document.getElementById('search_container');
@@ -167,7 +167,7 @@ async function search_movie(){
         item.appendChild(movieInformation);
 
         moviesList.appendChild(item);
-        
+
         let movieDetail = document.createElement('div');
         movieDetail.classList.add('movie_detail');
         movieDetail.setAttribute('id',`movie_detail${count}`);
