@@ -40,48 +40,241 @@
             </div>
             <div id="movies_list">
                 <div class="item" id="1">
-                    <div class="movie_poster">
+                    <div class="movie_poster" onclick="showDetail('movie_detail1');">
                         <img src="images/beautiful.jpg" alt="movie_poster">
                     </div>
                     <div class="movie_info">
                         <p class="movie_title">A beautiful Mind</p>
                         <p class="movie_plot">
-                            John Nash, a brilliant but asocial 
-                            mathematical genius, finds his life changing for the worse 
-                            after he accepts an assignment from William Parcher.
-                            John Nash, a brilliant but asocial 
-                            mathematical genius, finds his life changing for the worse 
-                            after he accepts an assignment from William Parcher.
+                            After John Nash, a brilliant but asocial mathematician, 
+                            accepts secret work in cryptography, his life takes a turn for the nightmarish.
                         </p>
                         <p class="movie_wish" id="movie_wish1" onclick="addToFavouritesList(this);">Favourite</p>
                     </div>
-                    <div>
-                        <p onclick="changeTab('batman');">click Here</p>
+                </div>
+<!-- Do from here -->
+                <div id="movie_detail1" class="movie_detail">
+                    <div class="child_container">
+                        <h3  onclick="hideDetail('movie_detail1');">Cancel</h3>
+                        <div class="movie_image">
+                            <img src="images/beautiful.jpg" alt="movie_poster">
+                        </div>
+                        <div class="movie_detail_information">
+                            <div class="title">
+                                <h1>Title</h1>
+                                <p>A beautiful Mind</p>
+                            </div>
+                            <div class="directors">
+                                <h1>Directors</h1>
+                                <p>Ron Howard</p>
+                            </div>
+                            <div class="actors">
+                                <h1>Actors</h1>
+                                <p>Russell Crowe, Ed Harris, Jennifer Connelly, Christopher Plummer</p>
+                            </div>
+                            <div class="awards">
+                                <h1>Awards</h1>
+                                <p>Won 4 Oscars. Another 33 wins & 69 nominations.</p>
+                            </div>
+                            <div class="plot">
+                                <h1>Plot</h1>
+                                <p>After John Nash, a brilliant but asocial mathematician, accepts secret work in cryptography, 
+                                    his life takes a turn for the nightmarish.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
                 <div class="item" id="2">
-                    <div class="movie_poster">
-                        <img src="images/beautiful.jpg" alt="movie_poster">
+                    <div class="movie_poster" onclick="showDetail('movie_detail2');">
+                        <img src="images/127hours.jpg" alt="movie_poster">
                     </div>
                     <div class="movie_info">
-                        <p class="movie_title">A beautiful Mind</p>
+                        <p class="movie_title">127 Hours</p>
                         <p class="movie_plot">
-                            John Nash, a brilliant but asocial 
-                            mathematical genius, finds his life changing for the worse 
-                            after he accepts an assignment from William Parcher.
-                            John Nash, a brilliant but asocial 
-                            mathematical genius, finds his life changing for the worse 
-                            after he accepts an assignment from William Parcher.
+                            A mountain climber becomes trapped under a boulder while canyoneering alone near Moab, 
+                            Utah and resorts to desperate measures in order to survive.
                         </p>
                         <p class="movie_wish" id="movie_wish2" onclick="addToFavouritesList(this);">Favourite</p>
                     </div>
-                    <!-- <div>
-                        <p onclick="changeTab('superman');">click Here</p>
-                    </div> -->
                 </div>
+
+                <div id="movie_detail2" class="movie_detail">
+                    <div class="child_container">
+                        <h3 onclick="hideDetail('movie_detail2');">Cancel</h3>
+                        <div class="movie_image">
+                            <img src="images/127hours.jpg" alt="movie_poster">
+                        </div>
+                        <div class="movie_detail_information">
+                            <div class="title">
+                                <h1>Title</h1>
+                                <p>127 Hours</p>
+                            </div>
+                            <div class="directors">
+                                <h1>Directors</h1>
+                                <p>Danny Boyle</p>
+                            </div>
+                            <div class="actors">
+                                <h1>Actors</h1>
+                                <p>James Franco, Amber Tamblyn, Kate Mara</p>
+                            </div>
+                            <div class="awards">
+                                <h1>Awards</h1>
+                                <p>Nominated for 6 Oscars. 23 wins & 150 nominations total</p>
+                            </div>
+                            <div class="plot">
+                                <h1>Plot</h1>
+                                <p>A mountain climber becomes trapped under a boulder while canyoneering alone near Moab, 
+                                    Utah and resorts to desperate measures in order to survive.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item" id="3">
+                    <div class="movie_poster" onclick="showDetail('movie_detail3');">
+                        <img src="images/nottling hill.jpg" alt="movie_poster">
+                    </div>
+                    <div class="movie_info">
+                        <p class="movie_title">Notting Hill</p>
+                        <p class="movie_plot">
+                            The life of a simple bookshop owner changes when he meets the most 
+                            famous film star in the world.
+                        </p>
+                        <p class="movie_wish" id="movie_wish3" onclick="addToFavouritesList(this);">Favourite</p>
+                    </div>
+                </div>
+
+                <div id="movie_detail3" class="movie_detail">
+                    <div class="child_container">
+                        <h3 onclick="hideDetail('movie_detail3');">Cancel</h3>
+                        <div class="movie_image">
+                            <img src="images/nottling hill.jpg" alt="movie_poster">
+                        </div>
+                        <div class="movie_detail_information">
+                            <div class="title">
+                                <h1>Title</h1>
+                                <p>Notting Hill</p>
+                            </div>
+                            <div class="directors">
+                                <h1>Directors</h1>
+                                <p>Roger Michell</p>
+                            </div>
+                            <div class="actors">
+                                <h1>Actors</h1>
+                                <p>Hugh Grant, Julia Roberts, Richard McCabe</p>
+                            </div>
+                            <div class="awards">
+                                <h1>Awards</h1>
+                                <p>11 wins & 17 nominations total</p>
+                            </div>
+                            <div class="plot">
+                                <h1>Plot</h1>
+                                <p>The life of a simple bookshop owner changes when he meets 
+                                    the most famous film star in the world.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item" id="4">
+                    <div class="movie_poster" onclick="showDetail('movie_detail4');">
+                        <img src="images/96.jpg" alt="movie_poster">
+                    </div>
+                    <div class="movie_info">
+                        <p class="movie_title">96</p>
+                        <p class="movie_plot">
+                            Two high school sweethearts meet at a reunion after 22 years 
+                            and reminisce about their past.
+                        </p>
+                        <p class="movie_wish" id="movie_wish4" onclick="addToFavouritesList(this);">Favourite</p>
+                    </div>
+                </div>
+
+
+                <div id="movie_detail4" class="movie_detail">
+                    <div class="child_container">
+                        <h3 onclick="hideDetail('movie_detail4');">Cancel</h3>
+                        <div class="movie_image">
+                            <img src="images/96.jpg" alt="movie_poster">
+                        </div>
+                        <div class="movie_detail_information">
+                            <div class="title">
+                                <h1>Title</h1>
+                                <p>96</p>
+                            </div>
+                            <div class="directors">
+                                <h1>Directors</h1>
+                                <p>C. Prem Kumar</p>
+                            </div>
+                            <div class="actors">
+                                <h1>Actors</h1>
+                                <p>Vijay Sethupathi, Adithya Bhaskar, Trisha Krishnan</p>
+                            </div>
+                            <div class="awards">
+                                <h1>Awards</h1>
+                                <p>14 wins & 11 nominations</p>
+                            </div>
+                            <div class="plot">
+                                <h1>Plot</h1>
+                                <p>Two high school sweethearts meet at a reunion after 
+                                    22 years and reminisce about their past.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item" id="5">
+                    <div class="movie_poster" onclick="showDetail('movie_detail5');">
+                        <img src="images/manjhi.jpg" alt="movie_poster">
+                    </div>
+                    <div class="movie_info">
+                        <p class="movie_title">Manjhi: The Mountain Man</p>
+                        <p class="movie_plot">
+                            Using only a hammer and a chisel, a man spends twenty-two years carving 
+                            a road through a treacherous mountain.
+                        </p>
+                        <p class="movie_wish" id="movie_wish5" onclick="addToFavouritesList(this);">Favourite</p>
+                    </div>
+                </div>
+
+                <div id="movie_detail5" class="movie_detail">
+                    <div class="child_container">
+                        <h3 onclick="hideDetail('movie_detail5');">Cancel</h3>
+                        <div class="movie_image">
+                            <img src="images/96.jpg" alt="movie_poster">
+                        </div>
+                        <div class="movie_detail_information">
+                            <div class="title">
+                                <h1>Title</h1>
+                                <p>Manjhi: The Mountain Man</p>
+                            </div>
+                            <div class="directors">
+                                <h1>Directors</h1>
+                                <p>Ketan Mehta</p>
+                            </div>
+                            <div class="actors">
+                                <h1>Actors</h1>
+                                <p>Nawazuddin Siddiqui, Radhika Apte, Ashutosh Acharya"</p>
+                            </div>
+                            <div class="awards">
+                                <h1>Awards</h1>
+                                <p>2 nominations</p>
+                            </div>
+                            <div class="plot">
+                                <h1>Plot</h1>
+                                <p>Using only a hammer and a chisel, a man spends twenty-two years 
+                                    carving a road through a treacherous mountain.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
             <div id="favourites_movies">
+                <div id="no_child">
+                    <h1>Favourites Movie Doesn't Exists!!!</h1>
+                </div>
                 <!-- <div class="item">
                     <div class="movie_poster">
                         <img src="images/beautiful.jpg" alt="movie_poster">

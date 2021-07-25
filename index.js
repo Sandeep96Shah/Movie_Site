@@ -7,6 +7,10 @@ function showFavouritesList(){
     movieList.style.display="none";
     favBtn.style.backgroundColor="blue";
     movieBtn.style.backgroundColor="grey";
+    if(favList.childElementCount>1){
+        let noChild=document.getElementById('no_child');
+        noChild.style.display='none';
+    }
 }
 
 function showMoviesList(){
@@ -58,6 +62,10 @@ function addToFavouritesList(e){
         wish.innerText="Favourite";
         //movie_wish.classList.add("movie_wish");
         wish.style.backgroundColor="blue";
+        if(favouritesMovies.childElementCount==1){
+            let noChild=document.getElementById('no_child');
+            noChild.style.display='block';
+        }
     });
     movie_wish.appendChild(document.createTextNode("Unfavourite"));
     movieInfo.appendChild(movie_title);
@@ -68,6 +76,10 @@ function addToFavouritesList(e){
     //console.log(favouritesMovies.childElementCount);
        wish.innerText="Unfavourite";
        wish.style.backgroundColor="red";
+
+       moviePoster.addEventListener('click',()=>{
+        changeTab(movieTitle);
+    })
    }else{
        wish.innerText="Favourite";
        wish.style.backgroundColor="blue";
@@ -75,6 +87,10 @@ function addToFavouritesList(e){
        let id = e.parentNode.parentNode.getAttribute('id');
        let item = document.getElementById(`fav${id}`);
        favouritesMovies.removeChild(item);
+       if(favouritesMovies.childElementCount==1){
+        let noChild=document.getElementById('no_child');
+        noChild.style.display='block';
+    }
    }
 }
 
@@ -120,6 +136,9 @@ async function search_movie(){
         item.setAttribute('id',count);
         let moviePoster = document.createElement('div');
         moviePoster.classList.add('movie_poster');
+        moviePoster.addEventListener('click',()=>{
+            showDetail(`movie_detail${count}`);
+        })
         let mpImage = document.createElement('img');
         mpImage.src=data.Poster;
         mpImage.alt=data.Title;
@@ -140,12 +159,97 @@ async function search_movie(){
             addToFavouritesList(movieLike);
             console.log(movieLike.id);
         });
+
         movieInformation.appendChild(movieTitle);
         movieInformation.appendChild(moviePlot);
         movieInformation.appendChild(movieLike);
         item.appendChild(moviePoster);
         item.appendChild(movieInformation);
+
         moviesList.appendChild(item);
+        
+        let movieDetail = document.createElement('div');
+        movieDetail.classList.add('movie_detail');
+        movieDetail.setAttribute('id',`movie_detail${count}`);
+        
+        let childContainer = document.createElement('div');
+        childContainer.classList.add('child_container');
+        
+        let ccH3=document.createElement('h3');
+        ccH3.addEventListener('click',()=>{
+            hideDetail(`movie_detail${count}`);
+        })
+        ccH3.appendChild(document.createTextNode('Cancel'));
+        
+        let movieImage = document.createElement('div');
+        movieImage.classList.add('movie_image');
+      
+        let miImage = document.createElement('img');
+        miImage.src=data.Poster;
+        movieImage.appendChild(miImage);
+        
+        let movieDetailInformation=document.createElement('div');
+        movieDetailInformation.classList.add('movie_detail_information');
+        
+        let mdTitle=document.createElement('div');
+        mdTitle.classList.add('title');
+        let mdTitleH1=document.createElement('h1');
+        mdTitleH1.appendChild(document.createTextNode("Title"));
+        mdTitleP=document.createElement('p');
+        mdTitleP.appendChild(document.createTextNode(data.Title));
+        mdTitle.appendChild(mdTitleH1);
+        mdTitle.appendChild(mdTitleP);
+
+        let mdDirectors=document.createElement('div');
+        mdDirectors.classList.add('directors');
+        let mdDirectorsH1=document.createElement('h1');
+        mdDirectorsH1.appendChild(document.createTextNode("Directors"));
+        mdDirectorsP=document.createElement('p');
+        mdDirectorsP.appendChild(document.createTextNode(data.Directors));
+        mdDirectors.appendChild(mdDirectorsH1);
+        mdDirectors.appendChild(mdDirectorsP);
+
+        let mdActors=document.createElement('div');
+        mdActors.classList.add('actors');
+        let mdActorsH1=document.createElement('h1');
+        mdActorsH1.appendChild(document.createTextNode("Actors"));
+        mdActorsP=document.createElement('p');
+        mdActorsP.appendChild(document.createTextNode(data.Actors));
+        mdActors.appendChild(mdActorsH1);
+        mdActors.appendChild(mdActorsP);
+
+        let mdAwards=document.createElement('div');
+        mdAwards.classList.add('awards');
+        let mdAwardsH1=document.createElement('h1');
+        mdAwardsH1.appendChild(document.createTextNode("Awards"));
+        mdAwardsP=document.createElement('p');
+        mdAwardsP.appendChild(document.createTextNode(data.Awards));
+        mdAwards.appendChild(mdAwardsH1);
+        mdAwards.appendChild(mdAwardsP);
+
+        let mdPlot=document.createElement('div');
+        mdPlot.classList.add('plot');
+        let mdPlotH1=document.createElement('h1');
+        mdPlotH1.appendChild(document.createTextNode("Plot"));
+        mdPlotP=document.createElement('p');
+        mdPlotP.appendChild(document.createTextNode(data.Plot));
+        mdPlot.appendChild(mdPlotH1);
+        mdPlot.appendChild(mdPlotP);
+
+        movieDetailInformation.appendChild(mdTitle);
+        movieDetailInformation.appendChild(mdDirectors);
+        movieDetailInformation.appendChild(mdActors);
+        movieDetailInformation.appendChild(mdAwards);
+        movieDetailInformation.appendChild(mdPlot);
+
+        childContainer.appendChild(ccH3);
+        childContainer.appendChild(movieImage);
+        childContainer.appendChild(movieDetailInformation);
+
+        movieDetail.appendChild(childContainer);
+
+        moviesList.appendChild(movieDetail);
+
         searchResult.remove();
         document.getElementById('movie').value='';
     })
@@ -175,13 +279,13 @@ function show_related_search(){
     }
 }
 
-function changeTab(movie){
-    let detail = document.getElementById('detail');
-    console.log(detail);
-    let a=document.createElement('a');
-    a.href="google.com";
-    ;
-    console.log(a);
-    //detail.appendChild(a.appendChild(document.createTextNode(movie)));
-    console.log(movie);
+function showDetail(e){
+    let movieDetail=document.getElementById(e);
+    movieDetail.style.display="block";
+    console.log(e);
+}
+
+function hideDetail(e){
+    let movieDetail=document.getElementById(e);
+    movieDetail.style.display="none";
 }

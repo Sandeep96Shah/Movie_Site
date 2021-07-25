@@ -11,6 +11,10 @@ p{
     margin: 0px;
     padding: 0px;
 }
+h1{
+    margin: 0px;
+    padding: 0px;
+}
 /* Header section */
 .header_container{
     background-color: grey;
@@ -50,7 +54,7 @@ p{
 }
 .search_result{
     margin-left: -60px;
-    width: 34%;
+    width: 45%;
     display: flex;
     border: 2px solid black;
     border-radius: 10px;
@@ -58,7 +62,7 @@ p{
 }
 .movie_information{
     width: 50%;
-}
+} 
 .search_poster{
     height: 170px;
     width: 150px;
@@ -164,6 +168,7 @@ p{
     margin-top: 10px;
     height: auto;
     width: 100%;
+    padding-bottom: 20px;
 }
 .item{
     display: flex;
@@ -175,15 +180,16 @@ p{
 .movie_poster{
     height: 235px;
     width: 25%;
+    cursor: pointer;
 }
 .movie_poster img{
     height: 100%;
     width: 100%;
 }
 .movie_info{
-    margin-left: 30px;
+    margin-left: 20px;
     height: 235px;
-    width: 60%;
+    width: 70%;
 }
 .movie_title{
     color: white;
@@ -201,7 +207,7 @@ p{
     width: 115px;
     color: white;
     font-size: 20px;
-    margin-top: 30px;
+    margin-top: 55px;
     background-color: blue;
     display: flex;
     justify-content: center;
@@ -228,4 +234,184 @@ p{
     align-items: center;
     border-radius: 10px;
     cursor: pointer;
+}
+.movie_detail{
+    display: none;
+    position: fixed;
+    top: 15vh;
+    left: 11vw;
+    background: white;
+    height: 73vh;
+    width: 70vw;
+    overflow:hidden;
+    padding-bottom: 50px;
+    border: 3px solid red;
+    border-radius: 20px;
+    background-color: antiquewhite;
+    padding-left: 20px;
+}
+.child_container{
+    height: 100%;
+    width: 103%;
+    overflow-y: scroll;
+}
+.movie_image{
+    height: 67%;
+    width: 100%;
+}
+.movie_image img{
+    height: 100%;
+    width: 90%;
+}
+.movie_detail_information{
+    margin-top: 20px;
+    width: 85%;
+}
+.title{
+    margin-bottom:20px;
+}
+.title p{
+    font-size: 20px;
+}
+.directors{
+    margin-bottom:20px;
+}
+.directors p{
+    font-size: 20px;
+}
+.actors{
+    margin-bottom:20px;
+}
+.actors p{
+    font-size: 20px;
+}
+.awards{
+    margin-bottom:20px;
+}
+.awards p{
+    font-size: 20px;
+}
+.plot p{
+    font-size: 20px;
+}
+.child_container h3{
+    background-color: red;
+    color: white;
+    height: 25px;
+    width: 60px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 4px;
+    cursor: pointer;
+}
+/* responsive */
+@media screen and (max-width: 900px){
+    .search_result{
+        width: 55%;
+    }
+}
+@media screen and (max-width: 700px){
+    .container{
+        margin-left: 50px;
+        width: 85%;
+    }
+    #movie{
+        width:360px ;
+    }
+    .search_result{
+        width: 65%;
+    }
+}
+
+@media screen and (max-width: 550px){
+    .container{
+        margin-left: 15px;
+        width: 95%;
+    }
+    .movie_wish{
+        margin-top: 35px;
+    }
+    #movie{
+        width: 300px;
+    }
+    .search_result{
+        width: 75%;
+    }
+}
+@media screen and (max-width: 400px){
+    #movie{
+        width: 210px;
+    }
+    .container{
+        margin-left: 0px;
+        width: 98%;
+    }
+    #display_movies{
+        height: 36px;
+        width: 95px;
+        margin-left: 10px;
+    }
+    #movie_btn{
+        font-size: 22px;
+    }
+    #display_favourites{
+        height: 36px;
+        width: 104px;
+        margin-left: 15px;
+    }
+    #fav_btn{
+        font-size: 22px;
+    }
+    .item{
+        margin: 15px 10px;
+    }
+    .search_poster{
+        width: 90px;
+        height: 120px;
+        margin-right: 20px;
+    }
+    .movie_information{
+        width: 55%;
+    }
+    .search_title{
+        margin: 5px 0px;
+        font-size: 21px;
+    }
+    .search_rating{
+        margin: 10px 0px;
+        font-size: 22px;
+    }
+    .search_add{
+        width: 50px;
+        height: 30px;
+        font-size: 20px;
+    }
+    .cancel{
+        width: 62px;
+        height: 30px;
+        font-size: 20px;
+    }
+    .movie_poster{
+        height: 215px;
+    }
+    .movie_info{
+        height: 125px;
+        margin-left: 10px;
+    }
+    .movie_title{
+        margin: 10px 0px;
+    }
+    .movie_plot{
+        margin: 12px 0px;
+    }
+    .movie_wish{
+        margin-top: 27px;
+    }
+    #movie{
+        width: 200px;
+    }
+    #search{
+        height: 35px;
+        width: 70px;
+    }
 }
