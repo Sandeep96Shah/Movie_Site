@@ -58,8 +58,8 @@ h1{
     display: flex;
     border: 2px solid black;
     border-radius: 10px;
-    background-color: grey;
-    box-shadow: 0px 0px 10px 5px grey;
+    background-color: white;
+    box-shadow: 0px 0px 10px 5px #9a9696cf;
 }
 .movie_information{
     width: 50%;
@@ -72,18 +72,19 @@ h1{
 .search_poster img{
     height: 100%;
     width: 100%;
+    border-radius: 10px;
 }
 .search_title{
     margin: 20px 0px;
     font-size: 22px;
     font-weight: 900;
-    color: white;
+    color: black;
 }
 .search_rating{
     margin: 25px 0px;
     font-size: 22px;
     font-weight: 900;
-    color: white;
+    color: black;
 }
 .search_add{
     font-size: 22px;
@@ -143,7 +144,7 @@ h1{
     justify-content: center;
     border-radius: 10px;
     cursor: pointer;
-    box-shadow: 0px 0px 8px 2px #161b1f;
+    box-shadow: 0px 0px 8px 2px #9a9696cf;
 }
 #display_favourites{
     height: 45px;
@@ -156,7 +157,7 @@ h1{
     justify-content: center;
     border-radius: 10px;
     cursor: pointer;
-    box-shadow: 0px 0px 8px 2px #161b1f;
+    box-shadow: 0px 0px 8px 2px #9a9696cf;
 }
 #movie_btn{
     font-size: 25px;
@@ -176,9 +177,9 @@ h1{
 .item{
     display: flex;
     margin: 15px 0px;
-    border: 2px solid black;
-    background-color: grey;
-    box-shadow: 0px 0px 10px 4px #161b1f;
+    border: 1px solid black;
+    background-color: white;
+    box-shadow: 0px 0px 10px 4px #9a9696cf;
     border-radius: 10px;
 }
 .movie_poster{
@@ -189,6 +190,7 @@ h1{
 .movie_poster img{
     height: 100%;
     width: 100%;
+    border-radius: 10px;
 }
 .movie_info{
     margin-left: 20px;
@@ -196,20 +198,20 @@ h1{
     width: 70%;
 }
 .movie_title{
-    color: white;
+    color: black;
     font-size: 25px;
     margin: 20px 0px;
     font-weight: bolder;
 }
 .movie_plot{
-    color: white;
+    color: black;
     font-size: 15px;
     margin: 30px 0px;
 }
 .movie_wish{
     height: 35px;
     width: 115px;
-    color: white;
+    color: black;
     font-size: 20px;
     margin-top: 55px;
     background-color: blue;
@@ -343,7 +345,8 @@ h1{
         width: 300px;
     }
     .search_result{
-        width: 75%;
+        width: 85%;
+        margin-left: -4vw;
     }
 }
 @media screen and (max-width: 400px){
@@ -375,18 +378,18 @@ h1{
     }
     .search_poster{
         width: 90px;
-        height: 120px;
+        height: 130px;
         margin-right: 20px;
     }
     .movie_information{
-        width: 55%;
+        width: 60%;
     }
     .search_title{
         margin: 5px 0px;
         font-size: 21px;
     }
     .search_rating{
-        margin: 10px 0px;
+        margin: 15px 0px;
         font-size: 22px;
     }
     .search_add{
@@ -400,7 +403,7 @@ h1{
         font-size: 20px;
     }
     .movie_poster{
-        height: 215px;
+        height: 220px;
     }
     .movie_info{
         height: 125px;
