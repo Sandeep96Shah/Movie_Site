@@ -9,12 +9,14 @@
     <title>Movie</title>
 </head>
 <body>
+    <!-- Header section with search input and search button -->
     <Section class="header_container">
         <form id="form_field">
             <input type="text" id="movie" onchange="show_related_search();" placeholder="Search Movie" />
             <button id="search" onclick="search_movie();">Search</button>
         </form>
     </Section>
+    <!-- searched result will be displayed in this format -->
     <section id="search_container">
         <!-- <div class="search_result">
             <div class="search_poster">
@@ -28,8 +30,10 @@
             </div>
         </div> -->
     </section>
+    <!-- main container where the movies are displayed -->
     <section class="main_container">
         <div class="container">
+            <!-- buttons to display all movies and favourites movies -->
             <div class="button">
                 <div id="display_movies">
                     <p id="movie_btn" onclick="showMoviesList();">Movies</p>
@@ -38,7 +42,9 @@
                     <p id="fav_btn" onclick="showFavouritesList();">Favourites</p>
                 </div>
             </div>
+            <!-- All movies are displayed in this div -->
             <div id="movies_list">
+                <!-- movie to display -->
                 <div class="item" id="1">
                     <div class="movie_poster" onclick="showDetail('movie_detail1');">
                         <img src="images/beautiful.jpg" alt="movie_poster">
@@ -49,10 +55,11 @@
                             After John Nash, a brilliant but asocial mathematician, 
                             accepts secret work in cryptography, his life takes a turn for the nightmarish.
                         </p>
+                        <!-- button with event Listener to add the movie into favourites list  -->
                         <p class="movie_wish" id="movie_wish1" onclick="addToFavouritesList(this);">Favourite</p>
                     </div>
                 </div>
-<!-- Do from here -->
+                <!-- movie detail section -->
                 <div id="movie_detail1" class="movie_detail">
                     <div class="child_container">
                         <h3  onclick="hideDetail('movie_detail1');">Cancel</h3>
@@ -84,7 +91,7 @@
                         </div>
                     </div>
                 </div>
-
+                <!-- movie to display -->
                 <div class="item" id="2">
                     <div class="movie_poster" onclick="showDetail('movie_detail2');">
                         <img src="images/127hours.jpg" alt="movie_poster">
@@ -95,10 +102,11 @@
                             A mountain climber becomes trapped under a boulder while canyoneering alone near Moab, 
                             Utah and resorts to desperate measures in order to survive.
                         </p>
+                        <!-- button with event Listener to add the movie into favourites list  -->
                         <p class="movie_wish" id="movie_wish2" onclick="addToFavouritesList(this);">Favourite</p>
                     </div>
                 </div>
-
+                <!-- movie detail section -->
                 <div id="movie_detail2" class="movie_detail">
                     <div class="child_container">
                         <h3 onclick="hideDetail('movie_detail2');">Cancel</h3>
@@ -130,7 +138,7 @@
                         </div>
                     </div>
                 </div>
-
+                <!-- movie to display -->
                 <div class="item" id="3">
                     <div class="movie_poster" onclick="showDetail('movie_detail3');">
                         <img src="images/nottling hill.jpg" alt="movie_poster">
@@ -141,10 +149,11 @@
                             The life of a simple bookshop owner changes when he meets the most 
                             famous film star in the world.
                         </p>
+                        <!-- button with event Listener to add the movie into favourites list  -->
                         <p class="movie_wish" id="movie_wish3" onclick="addToFavouritesList(this);">Favourite</p>
                     </div>
                 </div>
-
+                <!-- movie detail section -->
                 <div id="movie_detail3" class="movie_detail">
                     <div class="child_container">
                         <h3 onclick="hideDetail('movie_detail3');">Cancel</h3>
@@ -176,7 +185,7 @@
                         </div>
                     </div>
                 </div>
-
+                <!-- movie to display -->
                 <div class="item" id="4">
                     <div class="movie_poster" onclick="showDetail('movie_detail4');">
                         <img src="images/96.jpg" alt="movie_poster">
@@ -187,11 +196,12 @@
                             Two high school sweethearts meet at a reunion after 22 years 
                             and reminisce about their past.
                         </p>
+                        <!-- button with event Listener to add the movie into favourites list  -->
                         <p class="movie_wish" id="movie_wish4" onclick="addToFavouritesList(this);">Favourite</p>
                     </div>
                 </div>
 
-
+                <!-- movie detail section -->
                 <div id="movie_detail4" class="movie_detail">
                     <div class="child_container">
                         <h3 onclick="hideDetail('movie_detail4');">Cancel</h3>
@@ -223,7 +233,7 @@
                         </div>
                     </div>
                 </div>
-
+                <!-- movie to display -->
                 <div class="item" id="5">
                     <div class="movie_poster" onclick="showDetail('movie_detail5');">
                         <img src="images/wonder woman.jpg" alt="movie_poster">
@@ -234,10 +244,11 @@
                             When a pilot crashes and tells of conflict in the outside world, Diana, an Amazonian warrior in training, leaves home to fight a war,
                                      discovering her full powers and true destiny.
                         </p>
+                        <!-- button with event Listener to add the movie into favourites list  -->
                         <p class="movie_wish" id="movie_wish5" onclick="addToFavouritesList(this);">Favourite</p>
                     </div>
                 </div>
-
+                <!-- movie detail section -->
                 <div id="movie_detail5" class="movie_detail">
                     <div class="child_container">
                         <h3 onclick="hideDetail('movie_detail5');">Cancel</h3>
@@ -270,10 +281,12 @@
                 </div>
 
             </div>
+            <!-- favourites movies will be display here -->
             <div id="favourites_movies">
                 <div id="no_child">
                     <h1>Favourites Movie Doesn't Exists!!!</h1>
                 </div>
+                <!-- layout of the favourites movies -->
                 <!-- <div class="item">
                     <div class="movie_poster">
                         <img src="images/beautiful.jpg" alt="movie_poster">

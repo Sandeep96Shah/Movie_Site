@@ -1,3 +1,4 @@
+//function to display the favourites movies
 function showFavouritesList(){
     let movieList = document.getElementById('movies_list');
     let favList = document.getElementById('favourites_movies');
@@ -12,7 +13,7 @@ function showFavouritesList(){
         noChild.style.display='none';
     }
 }
-
+//function to display all movies
 function showMoviesList(){
     let movieList = document.getElementById('movies_list');
     let favList = document.getElementById('favourites_movies');
@@ -23,7 +24,7 @@ function showMoviesList(){
     favBtn.style.backgroundColor="grey";
     movieBtn.style.backgroundColor="blue";
 }
-
+//function to add the movie into favourites list with functionality
 function addToFavouritesList(e){
     console.log(e);
     let wish = document.getElementById(e.id);
@@ -94,7 +95,7 @@ function addToFavouritesList(e){
    }
 }
 
-
+//function to search for the movie and get the detail to show the result
 async function search_movie(){
     let formField = document.getElementById('form_field');
     formField.addEventListener('submit', (e)=>{
@@ -267,7 +268,7 @@ async function search_movie(){
     searchContainer.appendChild(searchResult);
     console.log(searchContainer);
 }
-
+//to make the search result visible
 function show_related_search(){
     let searchContainer = document.getElementById('search_container');
     let child = searchContainer.firstElementChild;
@@ -278,13 +279,13 @@ function show_related_search(){
         console.log("nothing to remove");
     }
 }
-
+//to display the detail of the movie
 function showDetail(e){
     let movieDetail=document.getElementById(e);
     movieDetail.style.display="block";
     console.log(e);
 }
-
+//to hide the detail of the movie
 function hideDetail(e){
     let movieDetail=document.getElementById(e);
     movieDetail.style.display="none";
